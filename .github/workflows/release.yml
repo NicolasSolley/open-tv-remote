@@ -2,10 +2,8 @@ name: Release
 
 # Publishing a GitHub release tagged vX.Y.Z uploads that version to TestFlight.
 # Running it by hand uploads whatever the chosen ref has, without the version check.
-on:
-  release:
-    types: [published]
-  workflow_dispatch:
+# Fork note: release trigger disabled — this fork ships unsigned IPAs via unsigned-ipa.yml instead of TestFlight.
+on: workflow_dispatch:
 
 permissions:
   contents: read
